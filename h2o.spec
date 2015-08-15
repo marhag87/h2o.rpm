@@ -1,6 +1,6 @@
 Summary: 	H2O - The optimized HTTP/1, HTTP/2 server
 Name: 		h2o
-Version: 	1.2.0
+Version: 	1.4.2
 Release: 	1%{?dist}
 License: 	MIT
 Group:		System Environment/Daemons
@@ -69,8 +69,14 @@ ctest -V %{?_smp_mflags}
 %attr(755,nobody,nobody) %dir /var/log/h2o
 %attr(755,nobody,nobody) %dir /var/run/h2o
 %dir /var/www
+%doc /usr/share/doc/h2o
+/usr/share/h2o
+/usr/include/h2o.h
+/usr/include/h2o
+/usr/lib/libh2o-evloop.so
 
 %changelog
+* Sat Aug 15 2015 Martin Hagstrom <marhag87@gmail.com> 1.4.2-1
+- Update to 1.4.2
 * Wed May 20 2015 Arnoud Vermeer <a.vermeer@freshway.biz> 1.2.0-1
 - new package built with tito
-
